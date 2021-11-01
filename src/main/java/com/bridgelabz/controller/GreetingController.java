@@ -22,7 +22,6 @@ public class GreetingController
 	{
 		return new ResponseEntity<String>("Hello everyone!", HttpStatus.OK);
 	}
-
 	
 	@RequestMapping(value = { "/query" })
 	public String sayHello(@RequestParam(value = "fname", defaultValue = "Padmini") String fname,
