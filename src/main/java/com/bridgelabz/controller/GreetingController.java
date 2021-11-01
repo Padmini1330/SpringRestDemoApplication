@@ -42,4 +42,11 @@ public class GreetingController
 	{
 		return "Hello " + name.getFirstName() + " " + name.getLastName();
 	}
+	
+	@PostMapping("/put/{firstName}")
+	public String sayHelloPostMethod(@PathVariable String firstName,
+			@RequestParam(value="lastName",defaultValue="Sharma") String lastName) 
+	{
+		return "Hello "+firstName+" "+lastName +"!";
+	}
 }
